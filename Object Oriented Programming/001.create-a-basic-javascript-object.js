@@ -1,4 +1,4 @@
 const dog = {
   name: 'Tommy',
-  legs: 4,
+  numLegs: 4,
 };
