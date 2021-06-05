@@ -1,7 +1,15 @@
 function myReplace(str, before, after) {
   const idx = str.match(before).index;
   const strArr = str.split('');
-  strArr.splice(idx, before.length, ...after.split(''));
+  const afterArr = after.split('');
+  if (before[0].toUpperCase() === before[0]) {
+    afterArr[0] = afterArr[0].toUpperCase();
+  }
+  if (before[0].toLowerCase() === before[0]) {
+    afterArr[0] = afterArr[0].toLowerCase();
+  }
+  strArr.splice(idx, before.length, ...afterArr);
+  console.log(strArr.join(''));
   return strArr.join('');
 }
 
